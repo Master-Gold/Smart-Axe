@@ -5,7 +5,7 @@ Now, with a smart axe, you can cut all the wood by cutting one stick!
 
 ## 📒 What is it doing now?
   
-### With this script you can name a axe using `/axe name <axe name>` and when you break an oak log, all oak logs around will be break and regenerate after 2 seconds.
+### With this script you can name a axe using `/axe name <axe name>` and when you break an oak log, all oak logs around will be break.
 
 ## ✅ Planned
 ### ❌ support more logs
@@ -16,11 +16,12 @@ Now, with a smart axe, you can cut all the wood by cutting one stick!
 ### ❌ world guard region support
 
 ## 📖 Commands
-### /axe help
+### `/axe help`
 #### to see help
-### /axe name <name>
+### `/axe name <name>`
 #### to change the name of the axe
-
+### `/axe regen <true/false> <delay>`
+#### to enable/disable regeneration and regeneration delay
 ![stars](https://img.shields.io/github/stars/Master-Gold/Smart-Axe?color=yellow)
 
 
