@@ -1,4 +1,4 @@
-# Smart Axe v1.1
+# Smart Axe v2.0.0
 Are you tired of cutting all the wood from the trees?
 Don't you want to cut all the wood by hand?
 Now, with a smart axe, you can cut all the wood by cutting one stick!
