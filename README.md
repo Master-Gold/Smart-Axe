@@ -8,7 +8,12 @@ Now, with a smart axe, you can cut all the wood by cutting one stick!
 ### With this script you can name a axe using `/axe name <axe name>` and when you break an oak log, all oak logs around will be break and regenerate after 2 seconds.
 
 ## ✅ Planned
-### soon
+### ❌ support more logs
+### ❌ change regenerate time
+### ❌ turn off and on regeneration
+### ❌ debug mode
+### ❌ usage permission
+### ❌ world guard region support
 
 ## 📖 Commands
 ### /axe help
