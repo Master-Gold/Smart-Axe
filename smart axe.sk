@@ -1,4 +1,4 @@
-#          Smart Axe v1.1                    Made By Master__Gold  (Master_Gold#4326)                       Smart Axe v1.1
+#          Smart Axe v2                    Made By Master__Gold  (Master_Gold#4326)                       Smart Axe v2
 command /axe [<text>] [<text>] [<text>]:
     description: manage smart axe script. /axe help
     permission: op
@@ -85,7 +85,7 @@ command /axe [<text>] [<text>] [<text>]:
                 send "&6[&eSmart Axe&6] &7  /axe regen <true/false> <delay>" to player
                 send "&6[&eSmart Axe&6] &8   example /axe regen true 3" to player
             else:
-                send "&6[&eSmart Axe&6] &aSmart Axe v1.1 | Made by Master__Gold" to player
+                send "&6[&eSmart Axe&6] &aSmart Axe v2.0 | Made by Master__Gold" to player
                 send "&6[&eSmart Axe&6] &7     Try /axe help for help!         " to player
 
 on script load:
