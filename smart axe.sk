@@ -1,5 +1,5 @@
-#                                    Made By Master__Gold  (Master_Gold#4326)
-command /axe [<text>] [<text>]:
+#          Smart Axe v2                    Made By Master__Gold  (Master_Gold#4326)                       Smart Axe v2
+command /axe [<text>] [<text>] [<text>]:
     description: manage smart axe script. /axe help
     permission: op
     permission message: "&cYou Dont have access to this command!"
@@ -10,16 +10,80 @@ command /axe [<text>] [<text>]:
         else:
             if arg-1 is "name" or "Name" or "NAME":
                 if arg 2 is not set:
-                    send "&6[&eSmart Axe&6] &cYou're Wrong! Correct usage is /axe name <text>" to player
+                    send "&6[&eSmart Axe&6] &cYou're Wrong! Correct usage is /axe name <text>." to player
                     stop
                 else:
                     set {smartaxeXname} to arg-2
-                    send "&6[&eSmart Axe&6] &2Smart Axe name was set to %{smartaxeXname}%" to player
+                    send "&6[&eSmart Axe&6] &2Smart Axe name was set to %{smartaxeXname}%." to player
                     stop
+            if arg-1 is "regen" or "Regen" or "REGEN":
+                if arg-2 is not set:
+                    send "&6[&eSmart Axe&6] &cYou're Wrong! Correct usage is /axe regen <true/false> <delay>." to player
+                    stop
+                else:
+                    if arg-2 is "true":
+                        if arg-3 is not set:
+                            send "&6[&eSmart Axe&6] &cYou're Wrong! Correct usage is /axe regen <true/false> <delay>." to player
+                            stop
+                        if arg-3 is "1":
+                            set {smartaxeXregen} to 1
+                        if arg-3 is "2":
+                            set {smartaxeXregen} to 2
+                        if arg-3 is "3":
+                            set {smartaxeXregen} to 3
+                        if arg-3 is "4":
+                            set {smartaxeXregen} to 4
+                        if arg-3 is "5":
+                            set {smartaxeXregen} to 5 
+                        if arg-3 is "6":
+                            set {smartaxeXregen} to 6
+                        if arg-3 is "7":
+                            set {smartaxeXregen} to 7
+                        if arg-3 is "8":
+                            set {smartaxeXregen} to 8
+                        if arg-3 is "9":
+                            set {smartaxeXregen} to 9
+                        if arg-3 is "10":
+                            set {smartaxeXregen} to 10 
+                        if arg-3 is "11":
+                            set {smartaxeXregen} to 11
+                        if arg-3 is "12":
+                            set {smartaxeXregen} to 12
+                        if arg-3 is "13":
+                            set {smartaxeXregen} to 13
+                        if arg-3 is "14":
+                            set {smartaxeXregen} to 14
+                        if arg-3 is "15":
+                            set {smartaxeXregen} to 15 
+                        if arg-3 is "16":
+                            set {smartaxeXregen} to 16
+                        if arg-3 is "17":
+                            set {smartaxeXregen} to 17
+                        if arg-3 is "18":
+                            set {smartaxeXregen} to 18
+                        if arg-3 is "19":
+                            set {smartaxeXregen} to 19
+                        if arg-3 is "20":
+                            set {smartaxeXregen} to 20 
+                        if arg-3 is not "1" or "2" or "3" or "4" or "5" or "6" or "7" or "8" or "9" or "10" or "11" or "12" or "13" or "14" or "15" or "16" or "17" or "18" or "19" or "20":
+                            send "&6[&eSmart Axe&6] &cim sorry but we dont support above 20 delay." to player
+                            stop
+                        send "&6[&eSmart Axe&6] &2Smart Axe name was set to True with %{smartaxeXregen}% delay." to player
+                        stop
+                    if arg-2 is "false":
+                        send "&6[&eSmart Axe&6] &2Smart Axe name was set to False." to player
+                        set {smartaxeXregen} to 0
+                        stop
+                    else:
+                        send "&6[&eSmart Axe&6] &cYou're Wrong! Correct usage is /axe regen <true/false> <delay>." to player
+                        stop
+
             if arg-1 is "help" or "Help" or "HELP":
                 send "&6[&eSmart Axe&6] &aIf you Want Change the axe name try: " to player
                 send "&6[&eSmart Axe&6] &7  /axe name <axe name>" to player
                 send "&6[&eSmart Axe&6] &8   example /axe name &6SmartAxe" to player
+                send "&6[&eSmart Axe&6] &7  /axe regen <true/false> <delay>" to player
+                send "&6[&eSmart Axe&6] &8   example /axe regen true 3" to player
             else:
                 send "&6[&eSmart Axe&6] &aSmart Axe v1.0 | Made by Master__Gold" to player
                 send "&6[&eSmart Axe&6] &7     Try /axe help for help!         " to player
@@ -27,6 +91,9 @@ command /axe [<text>] [<text>]:
 on script load:
     if {smartaxeXname} is not set:
         set {smartaxeXname} to "&6SmartAxe"
+    if {smartaxeXregen} is not set:
+        set {smartaxeXregen} to 0
+
 on block break:
     if player's tool's name is {smartaxeXname}:
         if player's gamemode is not creative:
@@ -38,7 +105,47 @@ on block break:
                 loop {_blocks::*}:
                     wait 2 ticks
                     break loop-value
-                wait 1 second
-                loop {_blocks::*}:
-                    wait 1 ticks
-                    set loop-value to oak log
+                if {smartaxeXregen} is not 0:
+                    if {smartaxeXregen} is 1:
+                        wait 1 seconds
+                    if {smartaxeXregen} is 2:
+                        wait 2 seconds
+                    if {smartaxeXregen} is 3:
+                        wait 3 seconds
+                    if {smartaxeXregen} is 4:
+                        wait 4 seconds
+                    if {smartaxeXregen} is 5:
+                        wait 5 seconds
+                    if {smartaxeXregen} is 6:
+                        wait 6 seconds
+                    if {smartaxeXregen} is 7:
+                        wait 7 seconds
+                    if {smartaxeXregen} is 8:
+                        wait 8 seconds
+                    if {smartaxeXregen} is 9:
+                        wait 9 seconds
+                    if {smartaxeXregen} is 10:
+                        wait 10 seconds
+                    if {smartaxeXregen} is 11:
+                        wait 11 seconds
+                    if {smartaxeXregen} is 12:
+                        wait 12 seconds
+                    if {smartaxeXregen} is 13:
+                        wait 13 seconds
+                    if {smartaxeXregen} is 14:
+                        wait 14 seconds
+                    if {smartaxeXregen} is 15:
+                        wait 15 seconds
+                    if {smartaxeXregen} is 16:
+                        wait 16 seconds
+                    if {smartaxeXregen} is 17:
+                        wait 17 seconds
+                    if {smartaxeXregen} is 18:
+                        wait 18 seconds
+                    if {smartaxeXregen} is 19:
+                        wait 19 seconds
+                    if {smartaxeXregen} is 20:
+                        wait 20 seconds
+                    loop {_blocks::*}:
+                        wait 1 ticks
+                        set loop-value to oak log
